@@ -4,9 +4,7 @@ pipeline {
   stages {
     stage('install playwright') {
       steps {
-        sh '''
-          npm install
-        '''
+        sh 'npm install'
       }
     }
     stage('help') {
@@ -16,9 +14,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh '''
-          $env:NODE_ENV='prod';npm run test --tags="@LoginScrenarios"
-        '''
+        sh '$env:NODE_ENV="prod";npm run test --tags="@LoginScrenarios"'
       }
     }
   }
