@@ -7,7 +7,7 @@ module.exports = {
             snippetInterface: "async-await"
         },
         paths: [
-            "features/*.feature"
+            "features/login.feature"
         ],
         dryRun: false,
         require: [

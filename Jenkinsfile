@@ -14,7 +14,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        bat 'set node_env=prod;npm run test --tags="@LoginScrenarios"'
+        bat 'npm run test'
       }
       post {
         always {
