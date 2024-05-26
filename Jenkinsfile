@@ -2,9 +2,14 @@ pipeline {
   agent any
 
   stages {
-    stage('install playwright') {
+    stage('install npm') {
       steps {
         bat 'npm install'
+      }
+    }
+    stage('install playwright') {
+      steps {
+        bat 'npx playwright install'
       }
     }
     stage('test') {
