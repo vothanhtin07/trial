@@ -15,6 +15,8 @@ Feature: User Authentication tests
 
   @LoginInValid
   Scenario: Login should not be success
+    Given User1 navigates to the application
+    And User1 click on the login link
     Given User1 enter the username as "koushik"
     Given User1 enter the password as "Passkoushik"
     When User1 click on the login button
