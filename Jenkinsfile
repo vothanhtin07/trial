@@ -17,13 +17,13 @@ pipeline {
         bat 'set node_env=prod;npm run test --tags="@LoginScrenarios"'
       }
       post {
-                always {
-                    allure includeProperties:
-                     false,
-                     jdk: '',
-                     results: [[path: 'allure-results']]
-                }
-            }
+        always {
+          allure includeProperties:
+            false,
+            jdk: '',
+            results: [[path: 'allure-results']]
+        }
+      }
     }
   }
 }
