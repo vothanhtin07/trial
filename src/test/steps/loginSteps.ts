@@ -31,9 +31,9 @@ When('User{int} click on the login button', async function (userNumber: number) 
     await loginPage.clickLogin()
 });
 
-Then('User{int} login should be success', async function (userNumber: number) {
+Then('User{int} with name {string} login should be success', async function (userNumber: number, name: string) {
     const loginPage = new LoginPage(allContextPages[`userPage${userNumber}`])
-    await loginPage.checkLoginSuccess()
+    await loginPage.checkLoginSuccess(name)
 });
 
 When('User{int} login should fail', async function (userNumber: number) {

@@ -48,10 +48,10 @@ export class LoginPage {
         await this.page.waitForTimeout(3000)
     }
 
-    async checkLoginSuccess() {
+    async checkLoginSuccess(name: any) {
         await this.tagName.waitFor({ state: "visible" })
         let text = await this.tagName.textContent()
-        expect(text?.toString()).toContain('tinvo')
+        expect(text?.toString()).toContain(name)
     }
 
     async checkLoginFail() {

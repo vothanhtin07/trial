@@ -11,7 +11,7 @@ Feature: User Authentication tests
     And User1 enter the username as "tinvo"
     And User1 enter the password as "1_Abc_123"
     When User1 click on the login button
-    Then User1 login should be success
+    Then User1 with name 'tinvo' login should be success
 
   @LoginInValid
   Scenario: Login should not be success
