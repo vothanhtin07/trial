@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env ENV=${node_env} cucumber-js --config=config/cucumber.js || true",
+    "test": "cross-env ENV=prod cucumber-js --config=config/cucumber.js || true",
     "generateAllure": "allure generate allure-results -o allure-report --clean && allure open allure-report"
   },
   "keywords": [],
