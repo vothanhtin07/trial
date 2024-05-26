@@ -2,20 +2,22 @@ pipeline {
   agent any
 
   stages {
-    stage('install npm') {
+    stage('Install NPM') {
       steps {
         bat 'npm install'
       }
     }
-    stage('install playwright') {
+    stage('Install Playwright') {
       steps {
         bat 'npx playwright install'
       }
     }
-    stage('test') {
+    stage('Run Test Scripts') {
       steps {
         bat 'npm run test'
       }
+    }
+    stage('Generate Allure Report') {
       post {
         always {
           allure includeProperties:
