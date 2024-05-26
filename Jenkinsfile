@@ -4,17 +4,17 @@ pipeline {
   stages {
     stage('install playwright') {
       steps {
-        sh 'npm install'
+        bat 'npm install'
       }
     }
     stage('help') {
       steps {
-        sh 'npx playwright test --help'
+        bat 'npx playwright test --help'
       }
     }
     stage('test') {
       steps {
-        sh '$env:NODE_ENV="prod";npm run test --tags="@LoginScrenarios"'
+        bat '$env:NODE_ENV="prod";npm run test --tags="@LoginScrenarios"'
       }
     }
   }
