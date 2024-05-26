@@ -51,7 +51,7 @@ export class LoginPage {
     async checkLoginSuccess() {
         await this.tagName.waitFor({ state: "visible" })
         let text = await this.tagName.textContent()
-        expect(text?.toString()).toContain('ortoni11')
+        expect(text?.toString()).toContain('tinvo')
     }
 
     async checkLoginFail() {
