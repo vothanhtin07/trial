@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Run Test Scripts') {
       steps {
-        bat 'npm run test --tags="@LoginInValid"'
+        bat 'npm run test'
       }
     }
     stage('Generate Allure Report') {
