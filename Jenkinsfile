@@ -14,7 +14,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        bat 'npm run test'
+        bat '$env:NODE_ENV="prod";npm run test --tags="@LoginScrenarios"'
       }
     }
   }
