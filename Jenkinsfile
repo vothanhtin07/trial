@@ -18,6 +18,9 @@ pipeline {
       }
     }
     stage('Generate Allure Report') {
+      steps {
+        bat 'echo Generate Allure Report'
+      }
       post {
         always {
           allure includeProperties:
