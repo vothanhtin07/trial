@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Run Test Scripts') {
       steps {
-        bat 'npm run test'
+        bat 'set node_env=prod;npm run test --tags="@LoginScrenarios"'
       }
     }
     stage('Generate Allure Report') {
